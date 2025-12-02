@@ -15,11 +15,12 @@
 
                         </ul>
                     </div>
-                </div><a class="ps-logo" [routerLink]="['/home']"><img src="img/logo_new3.png" alt="" /></a>
+                </div><a class="ps-logo" [routerLink]="['/home']"><img src="img/logo_new4.png" alt="" /></a>
             </div>
             <div class="header__center">
                 <form class="ps-form--quick-search" action="#" method="get">
-                    <input class="form-control" (keyup)="search($event)" type="text" placeholder="Tìm kiếm theo tên sản phẩm..." id="input-search" />
+                    <input class="form-control" (keyup)="search($event)" type="text"
+                        placeholder="Tìm kiếm theo tên sản phẩm..." id="input-search" />
                     <button [routerLink]="['/search/'+keyword]">Tìm</button>
                 </form>
             </div>
@@ -51,10 +52,12 @@
                                         <a [routerLink]="['/profile']" style="color: white;">Thông tin người dùng</a>
                                     </li>
                                     <li *ngIf="!isLogin">
-                                        <a [routerLink]="['/sign-form']" style="color: white;">Đăng nhập &amp; Đăng ký</a>
+                                        <a [routerLink]="['/sign-form']" style="color: white;">Đăng nhập &amp; Đăng
+                                            ký</a>
                                     </li>
                                     <li *ngIf="isLogin">
-                                        <a href="javascript:void(0);" (click)="logout()" style="color: white;">Đăng xuất</a>
+                                        <a href="javascript:void(0);" (click)="logout()" style="color: white;">Đăng
+                                            xuất</a>
                                     </li>
                                 </ul>
                             </div>
@@ -68,7 +71,8 @@
         <div class="ps-container">
             <div class="navigation__left">
                 <div class="menu--product-categories">
-                    <div class="menu__toggle"><i class="icon-menu"></i><span style="color: white;"> MUA SẮM THEO DANH MỤC</span></div>
+                    <div class="menu__toggle"><i class="icon-menu"></i><span style="color: white;"> MUA SẮM THEO DANH
+                            MỤC</span></div>
                     <div class="menu__content">
                         <ul class="menu--dropdown">
                             <li *ngFor="let item of categories">
@@ -84,7 +88,8 @@
                     <li class="menu-item"><a [routerLink]="['/all-product']" style="color: white;">Cửa hàng</a></li>
                     <li class="menu-item"><a [routerLink]="['/about']" style="color: white;">Giới thiệu</a></li>
                     <li class="menu-item"><a [routerLink]="['/contact']" style="color: white;">Liên hệ</a></li>
-                    <li class="menu-item" *ngIf="!isLogin"><a [routerLink]="['/sign-form']" style="color: white;">Đăng nhập &amp; Đăng ký</a></li>
+                    <li class="menu-item" *ngIf="!isLogin"><a [routerLink]="['/sign-form']" style="color: white;">Đăng
+                            nhập &amp; Đăng ký</a></li>
                 </ul>
             </div>
         </div>
